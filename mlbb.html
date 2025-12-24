@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Mobile Legends - APKMu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Poppins', sans-serif; background-color: #f3f4f6; }
+    </style>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { brand: { 500: '#10b981', 600: '#059669', }, dark: '#1f2937', } } } }
+    </script>
+</head>
+<body class="text-gray-800 pb-10">
+
+    <!-- HEADER: TOMBOL KEMBALI -->
+    <header class="bg-white p-4 shadow-sm sticky top-0 z-50 flex items-center gap-4">
+        <a href="index.html" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-dark hover:bg-gray-200">
+            <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <h1 class="font-bold text-lg text-dark truncate">Detail Aplikasi</h1>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-4 mt-6">
+
+        <!-- KOTAK INFO APLIKASI -->
+        <div class="bg-white rounded-3xl p-5 shadow-sm mb-4">
+            <div class="flex items-start gap-4">
+                <img src="https://play-lh.googleusercontent.com/Eqos3Z9q8c_4j8p9y4B_MFrL_i8_c-pQ5j-bL7j_t1c-z8_k-x8q_w9_E-r_t5y_u-I=w240-h480-rw" alt="MLBB Icon" class="w-24 h-24 rounded-2xl shadow-md object-cover">
+                <div class="flex-1">
+                    <h1 class="text-xl font-bold text-dark leading-tight mb-1">Mobile Legends Bang Bang</h1>
+                    <p class="text-sm text-brand-500 font-medium mb-2">Moonton</p>
+                    <div class="flex items-center gap-2 text-xs text-gray-500">
+                        <span class="bg-gray-100 px-2 py-0.5 rounded text-dark font-semibold">Ver 1.9.9</span>
+                        <span>|</span>
+                        <span>150 MB</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TOMBOL DOWNLOAD -->
+            <div class="mt-6">
+                <!-- GANTI LINK GITHUB RELEASES DI SINI -->
+                <a href="LINK_GITHUB_APK_DISINI" class="block w-full text-center bg-brand-500 hover:bg-brand-600 text-white font-bold py-3.5 rounded-xl shadow-lg shadow-brand-500/30 transition-all active:scale-95">
+                    <i class="fa-solid fa-download animate-bounce mr-2"></i>
+                    DOWNLOAD APK
+                </a>
+                <p class="text-center text-xs text-gray-400 mt-2">Server GitHub • Aman & Cepat</p>
+            </div>
+
+            <!-- PERINGATAN MERAH (REQUEST) -->
+            <div class="mt-5 bg-red-50 border border-red-200 rounded-xl p-4">
+                <div class="flex gap-2 items-start">
+                    <i class="fa-solid fa-triangle-exclamation text-red-600 mt-0.5"></i>
+                    <div>
+                        <p class="text-red-700 font-bold text-sm mb-1">Peringatan Keras:</p>
+                        <p class="text-red-600 text-xs leading-relaxed">
+                            Jangan publikasikan ulang APK dari APKMU ke Google Play Store atau situs lain tanpa izin developer asli. Kami akan laporkan pelaku ke platform terkait untuk jaga hak cipta.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DESKRIPSI -->
+        <div class="bg-white rounded-3xl p-5 shadow-sm mb-6">
+            <h2 class="text-lg font-bold text-dark mb-3">Tentang Game</h2>
+            <div class="prose prose-sm text-gray-600 leading-relaxed">
+                <p>Mobile Legends: Bang Bang adalah game MOBA mobile terpopuler...</p>
+                <p>Bergabunglah dengan teman-teman Anda dalam pertarungan 5v5 MOBA melawan pemain manusia sungguhan!</p>
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>
