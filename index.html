@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>APKMu - Store</title>
+    <title>APKMu - Alternatif Play Store</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body { font-family: 'Poppins', sans-serif; background-color: #f3f4f6; }
         .no-scrollbar::-webkit-scrollbar { display: none; }
-        .glass-header { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        /* Glass Effect */
+        .glass-header { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); }
     </style>
     <script>
         tailwind.config = { theme: { extend: { colors: { brand: { 500: '#10b981', 600: '#059669', }, dark: '#1f2937', } } } }
@@ -20,78 +21,105 @@
 
     <!-- HEADER UTAMA -->
     <header class="fixed top-0 w-full z-50 glass-header shadow-sm border-b border-gray-100">
-        <div class="max-w-3xl mx-auto px-4 h-16 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-2">
-                <div class="w-8 h-8 bg-brand-500 rounded-lg flex items-center justify-center text-white font-bold">A</div>
-                <span class="text-xl font-bold tracking-tight text-dark">APK<span class="text-brand-500">Mu</span></span>
-            </a>
-            <button class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600">
-                <i class="fa-solid fa-search"></i>
-            </button>
+        <!-- Bagian Logo & Subtitle -->
+        <div class="max-w-3xl mx-auto px-4 pt-3 pb-1">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-2">
+                    <div class="w-8 h-8 bg-brand-500 rounded-lg flex items-center justify-center text-white font-bold">A</div>
+                    <span class="text-xl font-bold tracking-tight text-dark">APK<span class="text-brand-500">Mu</span></span>
+                </a>
+                <button class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600">
+                    <i class="fa-solid fa-search"></i>
+                </button>
+            </div>
+            
+            <!-- SUBTITLE REQUEST -->
+            <p class="text-[10px] md:text-xs font-medium text-brand-600 mt-2 mb-1">
+                Unduh APK: Aman, Cepat, Gratis – Alternatif Terbaik Play Store!
+            </p>
         </div>
-        <!-- MENU BAR -->
-        <div class="w-full bg-white border-b border-gray-100">
+
+        <!-- NAVBAR MENU (SCROLLABLE) -->
+        <div class="w-full bg-white border-t border-gray-50">
             <div class="max-w-3xl mx-auto">
-                <nav class="flex overflow-x-auto no-scrollbar py-3 px-4 gap-3">
-                    <span class="px-4 py-1.5 bg-brand-500 text-white rounded-full text-sm font-medium whitespace-nowrap shadow-md">Beranda</span>
-                    <span class="px-4 py-1.5 bg-gray-100 text-gray-600 rounded-full text-sm font-medium whitespace-nowrap">Populer</span>
-                    <span class="px-4 py-1.5 bg-gray-100 text-gray-600 rounded-full text-sm font-medium whitespace-nowrap">Game</span>
+                <nav class="flex overflow-x-auto no-scrollbar py-3 px-4 gap-2">
+                    <!-- LINK NAVBAR: GANTI href="#" DENGAN LINK YANG SESUAI -->
+                    
+                    <a href="index.html" class="px-4 py-1.5 bg-brand-500 text-white rounded-full text-xs font-bold whitespace-nowrap shadow-md shadow-brand-500/30">
+                        Beranda
+                    </a>
+                    
+                    <a href="#" class="px-4 py-1.5 bg-gray-100 text-gray-600 rounded-full text-xs font-bold whitespace-nowrap hover:bg-gray-200">
+                        Populer
+                    </a>
+
+                    <a href="#" class="px-4 py-1.5 bg-gray-100 text-gray-600 rounded-full text-xs font-bold whitespace-nowrap hover:bg-gray-200">
+                        Game
+                    </a>
+
+                    <a href="#" class="px-4 py-1.5 bg-gray-100 text-gray-600 rounded-full text-xs font-bold whitespace-nowrap hover:bg-gray-200">
+                        Islam
+                    </a>
+
+                    <a href="#" class="px-4 py-1.5 bg-gray-100 text-gray-600 rounded-full text-xs font-bold whitespace-nowrap hover:bg-gray-200">
+                        Tools
+                    </a>
+
+                    <a href="#" class="px-4 py-1.5 bg-gray-100 text-gray-600 rounded-full text-xs font-bold whitespace-nowrap hover:bg-gray-200">
+                        Tips
+                    </a>
+
+                    <!-- Link ke Halaman Privacy Policy -->
+                    <a href="privacy.html" class="px-4 py-1.5 bg-gray-800 text-white rounded-full text-xs font-bold whitespace-nowrap hover:bg-black">
+                        Privacy Policy
+                    </a>
                 </nav>
             </div>
         </div>
     </header>
 
-    <div class="h-32"></div>
+    <!-- SPACER AGAR KONTEN TIDAK TERTUTUP HEADER -->
+    <div class="h-36"></div>
 
-    <!-- DAFTAR APLIKASI -->
+    <!-- MAIN CONTENT -->
     <main class="max-w-3xl mx-auto px-4">
-        <h2 class="text-lg font-bold text-dark mb-3 px-1">Baru Diupdate</h2>
+        <h2 class="text-lg font-bold text-dark mb-3 px-1">Update Terbaru</h2>
         
-        <!-- Area ini akan diisi otomatis oleh Javascript di bawah -->
+        <!-- CONTAINER APLIKASI -->
         <div id="container-aplikasi" class="space-y-3"></div>
     </main>
 
     <!-- FOOTER -->
-    <footer class="mt-10 py-6 text-center text-gray-400 text-sm">
-        <p>&copy; 2025 APKMu. All rights reserved.</p>
+    <footer class="mt-12 py-6 text-center border-t border-gray-200">
+        <p class="text-brand-500 font-bold">APKMu Private Project</p>
+        <p class="text-xs text-gray-400 mt-1">© 2025 All rights reserved.</p>
     </footer>
 
-    <!-- JAVASCRIPT: LOGIKA & DATABASE -->
+    <!-- LOGIKA JAVASCRIPT -->
     <script>
-        // ============================================================
-        //  1. AREA DATABASE (DAFTARKAN FILE HTML ANDA DI SINI)
-        // ============================================================
+        // DATA APLIKASI (Tambahkan file baru di sini)
         const daftarAplikasi = [
-            // Format: { judul: "Nama", file: "namafile.html", icon: "link_gambar", versi: "1.0", size: "MB" },
             
+            // --- DATA MOBILE LEGENDS YANG ANDA MINTA ---
             {
-                judul: "WhatsApp Messenger",
-                file: "whatsapp.html", 
-                icon: "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg",
-                versi: "2.24.11",
-                size: "85 MB"
-            },
-            {
-                judul: "Telegram",
-                file: "telegram.html",
-                icon: "https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg",
-                versi: "10.2.9",
-                size: "70 MB"
+                judul: "Mobile Legends Bang Bang",
+                file: "mlbb.html",  // Mengarah ke file mlbb.html
+                icon: "https://play-lh.googleusercontent.com/Eqos3Z9q8c_4j8p9y4B_MFrL_i8_c-pQ5j-bL7j_t1c-z8_k-x8q_w9_E-r_t5y_u-I=w240-h480-rw", // Icon MLBB
+                versi: "1.9.9",
+                size: "150 MB"
             },
             
-            // --> NANTI, COPY PASTE KODE DI ATAS KE SINI UNTUK APLIKASI BARU <--
+            // Anda bisa copy-paste blok {} di atas untuk menambah aplikasi lain
         ];
 
-        // ============================================================
-        //  2. LOGIKA RENDER (JANGAN DIUBAH)
-        // ============================================================
+        // RENDER OTOMATIS
         const container = document.getElementById('container-aplikasi');
         
         daftarAplikasi.forEach(app => {
             const card = `
-                <div class="bg-white p-3 rounded-2xl shadow-sm flex items-center gap-3 hover:bg-gray-50 transition border border-transparent hover:border-gray-200" onclick="window.location.href='${app.file}'" style="cursor: pointer;">
+                <div class="bg-white p-3 rounded-2xl shadow-sm flex items-center gap-3 hover:bg-gray-50 transition border border-transparent hover:border-gray-200 cursor-pointer" onclick="window.location.href='${app.file}'">
                     <img src="${app.icon}" class="w-14 h-14 rounded-xl object-cover shadow-sm bg-gray-100">
-                    <div class="flex-1">
+                    <div class="flex-1 overflow-hidden">
                         <h3 class="font-semibold text-dark text-base truncate">${app.judul}</h3>
                         <p class="text-xs text-gray-500 mt-1">
                             <span class="bg-gray-100 px-1.5 py-0.5 rounded text-gray-600 font-medium">${app.versi}</span>
@@ -106,6 +134,5 @@
             container.innerHTML += card;
         });
     </script>
-
 </body>
 </html>
